@@ -1,10 +1,13 @@
-import { gsap } from "gsap";
+import Card from "./Components/Card";
 import Bg from "./Components/Bg";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <>
-      <Bg />
+      {/* <Bg /> */}
+      <Card />
+      <Footer />
     </>
   );
 }

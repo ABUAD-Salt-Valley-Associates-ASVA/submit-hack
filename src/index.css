@@ -9,3 +9,7 @@ body {
   letter-spacing: 1.6px;
   margin: 0%;
 }
+
+:root{
+  --color: #383636;
+}
