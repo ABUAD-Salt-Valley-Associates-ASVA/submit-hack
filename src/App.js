@@ -1,13 +1,11 @@
-import "./App.css";
-import Left from "./components/Left";
+import { gsap } from "gsap";
+import Bg from "./Components/Bg";
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <Left />
-      </div>
-    </div>
+    <>
+      <Bg />
+    </>
   );
 }
 
