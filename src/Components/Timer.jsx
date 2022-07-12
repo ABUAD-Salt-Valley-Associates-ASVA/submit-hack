@@ -3,7 +3,6 @@ import Countdown from "react-countdown";
 import TimesUp from "./TimesUp";
 import Form from "./Form";
 import "./Card.css";
-import Upload from "./Upload";
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -20,12 +19,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
           </div>
         </div>
         <div className="card-body">
-          <div className="right">
-            <Form />
-          </div>
-          <div className="left">
-            <Upload />
-          </div>
+          <Form />
         </div>
       </div>
     );

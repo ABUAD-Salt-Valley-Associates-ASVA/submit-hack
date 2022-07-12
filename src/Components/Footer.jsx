@@ -12,6 +12,7 @@ const Footer = () => {
         class="glassIco"
         href="https://goo.gl/maps/eH4vxhLr2pq3uscu8"
         target="_blank"
+        rel="noreferrer"
       >
         <MdLocationPin />
       </a>
@@ -22,6 +23,7 @@ const Footer = () => {
         class="glassIco"
         href="https://www.instagram.com/a.s.v.a__/"
         target="_blank"
+        el="noreferrer"
       >
         <BsInstagram />
       </a>
@@ -29,6 +31,7 @@ const Footer = () => {
         class="glassIco"
         href="https://www.linkedin.com/company/abuad-salt-valley-associates-asva/"
         target="_blank"
+        rel="noreferrer"
       >
         <FaLinkedin />
       </a>
@@ -36,6 +39,7 @@ const Footer = () => {
         class="glassIco"
         href="https://mobile.twitter.com/asva__"
         target="_blank"
+        rel="noreferrer"
       >
         <BsTwitter />
       </a>
