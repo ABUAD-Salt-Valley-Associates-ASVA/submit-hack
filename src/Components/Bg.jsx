@@ -64,28 +64,6 @@ gsap.timeline().add(centerMain(), 0.2).from(
   },
   0
 );
-// .fromTo(
-//   ".card",
-//   {
-//     x: 200,
-//     y: 40,
-//     transformOrigin: "50% 50%",
-//     rotation: -4,
-//     skewX: 10,
-//     skewY: 4,
-//     scale: 2,
-//     opacity: 0,
-//   },
-//   {
-//     duration: 1.3,
-//     skewX: 0,
-//     skewY: 0,
-//     scale: 1,
-//     opacity: 1,
-//     ease: "power4.inOut",
-//   },
-//   0.2
-// );
 
 function centerMain() {
   gsap.set(".main", { x: "50%", xPercent: -50, y: "50%", yPercent: -50 });
