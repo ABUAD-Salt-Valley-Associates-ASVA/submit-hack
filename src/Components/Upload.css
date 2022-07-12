@@ -1,0 +1,10 @@
+.upload-container {
+    border-radius: 2rem;
+    border-style: dashed;
+    width: 90%;
+    height: 390px;
+}
+
+.drop {
+    padding: 2rem;
+}

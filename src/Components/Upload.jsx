@@ -1,30 +1,37 @@
-import React, {useState} from 'react'
-import { useDropzone } from "react-dropzone"
+import React, { useState } from "react";
+import { useDropzone } from "react-dropzone";
+import "./Upload.css";
 
-function Upload () {
-    const [files, setFiles] = useState([])
+function Upload() {
+  const { getRootProps, getInputProps, open, acceptedFiles } = useDropzone({
+    // Disable click and keydown behavior
+    noClick: true,
+    noKeyboard: true,
+  });
 
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
-    onDrop: (acceptedFiles) => {
-      setFiles(
-        acceptedFiles.map((file) =>
-          Object.assign(file, {
-            preview: URL.createObjectURL(file),
-          })
-        )
-      )
-    },
-  })
+  const files = acceptedFiles.map((file) => (
+    <li key={file.path}>
+      {file.path} - {file.size} bytes
+    </li>
+  ));
 
   return (
-    <div>Upload
-        <div {...getRootProps()}>
-        <input {...getInputProps()} />
-        <p>Drop files here</p>
+    <div className="upload-container">
+      <div className="drop">
+        <div {...getRootProps({ className: "dropzone" })}>
+          <input {...getInputProps()} />
+          <p>Drag 'n' drop your files here</p>
+          <button type="button" onClick={open} className="submit">
+            Select file
+          </button>
+        </div>
+        <aside>
+          <h4>Files</h4>
+          <ul>{files}</ul>
+        </aside>
       </div>
     </div>
-  )
+  );
 }
 
-export default Upload
+export default Upload;

@@ -17,8 +17,8 @@
 .left {
     width: 300px;
     float: left;
-    border-style: dashed;
+    /* border-style: dashed;
     border-radius: 1em;
     border-color: var(--color);
-    height: 300px;
+    height: 300px; */
 }

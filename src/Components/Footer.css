@@ -1,5 +1,5 @@
 .glassIco {
-    --width: 100px;
+    --width: 50px;
     width: var(--width);
     height: var(--width);
     color: var(--color); /* #fff */

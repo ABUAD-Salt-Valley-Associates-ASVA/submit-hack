@@ -3,7 +3,7 @@ import gsap from 'gsap'
 
 const Bg = () => {
   return (
-    <svg width="100%" height="100vh">
+    <svg width="100%" height="100%">
     <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="65%">
             <stop offset="10%" stop-color="#004476" />

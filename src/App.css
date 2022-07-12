@@ -1,0 +1,6 @@
+.back-g {
+    height: 100vh;
+        z-index: -1000000000;
+        position: absolute;
+        width: 100%;
+}
