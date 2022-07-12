@@ -68,6 +68,17 @@ gsap
     0
   )
   .fromTo(
+    ".card",
+    {
+      x: 200,
+      y: 40,
+      transformOrigin: "50% 50%",
+      rotation: -4,
+      skewX: 10,
+      skewY: 4,
+      scale: 2,
+      opacity: 0,
+    },
     {
       duration: 1.3,
       skewX: 0,
@@ -95,7 +106,7 @@ window.onmousemove = (e) => {
 
   gsap
     .timeline({ defaults: { duration: 0.5, overwrite: "auto" } })
-
+    .to(".card", { rotation: -7 + 9 * winPercent.x }, 0)
     .to(".fillLight", { opacity: distFromCenter }, 0)
     .to(".bg", { x: 100 - 200 * winPercent.x, y: 20 - 40 * winPercent.y }, 0);
 };
