@@ -1,57 +1,59 @@
-import React from 'react'
-import gsap from 'gsap'
+import React from "react";
+import gsap from "gsap";
 
 const Bg = () => {
   return (
     <svg width="100%" height="100%">
-    <defs>
+      <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="65%">
-            <stop offset="10%" stop-color="#004476" />
-            <stop offset="90%" stop-color="#006fbe" />
+          <stop offset="10%" stop-color="#004476" />
+          <stop offset="90%" stop-color="#006fbe" />
         </linearGradient>
         <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="85%">
-            <stop offset="0%" stop-color="#f5eacc" />
-            <stop offset="80%" stop-color="#e0c677" />
-            <stop offset="110%" stop-color="#ebd8a0" />
+          <stop offset="0%" stop-color="#f5eacc" />
+          <stop offset="80%" stop-color="#e0c677" />
+          <stop offset="110%" stop-color="#ebd8a0" />
         </linearGradient>
         <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="85%">
-            <stop offset="0%" stop-color="#54e2fe" />
-            <stop offset="80%" stop-color="#049afd" />
-            <stop offset="110%" stop-color="#2aaffc" />
+          <stop offset="0%" stop-color="#54e2fe" />
+          <stop offset="80%" stop-color="#049afd" />
+          <stop offset="110%" stop-color="#2aaffc" />
         </linearGradient>
         <linearGradient id="grad4" x1="0%" y1="0%" x2="80%" y2="70%">
-            <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
-            <stop offset="90%" stop-color="rgba(255,255,255,0.3)" />
+          <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
+          <stop offset="90%" stop-color="rgba(255,255,255,0.3)" />
         </linearGradient>
+      </defs>
 
+      <rect fill="url(#grad1)" width="100%" height="100%" />
 
+      <g class="main">
+        <circle
+          class="ball bg"
+          fill={fill[random1]}
+          cx="300"
+          cy="130"
+          r="130"
+        />
+        <circle
+          class="ball bg"
+          fill={fill[random1 + -1]}
+          cx="750"
+          cy="410"
+          r="210"
+        />
+      </g>
+    </svg>
+  );
+};
 
-        <mask id="m">
-            <rect class="card" fill="#fff" width="340" height="540" rx="30" ry="30" />
-        </mask>
+const fill = ["url(#grad4)", "url(#grad3)", "url(#grad2)", "url(#grad1)"];
+const random1 = Math.floor(Math.random() * fill.length);
 
-    </defs>
-
-    <rect fill="url(#grad1)" width="100%" height="100%" />
-
-    <g class="main">
-        <circle class="ball bg" fill="url(#grad2)" cx="120" cy="130" r="130" />
-        <circle class="ball bg" fill="url(#grad3)" cx="550" cy="410" r="210" />
-    </g>
-</svg>
-  )
-}
-
-export default Bg
-
+export default Bg;
 
 gsap
   .timeline()
-  .set(".logo", { x: 215, y: 482 })
-  .set(".chip", { x: 148, y: 66 })
-  .set(".knot", { x: 22, y: 250 })
-  .set(".numTxt", { x: 22, y: 375 })
-  .set(".nameTxt", { x: 22, y: 410 })
   .add(centerMain(), 0.2)
   .from(
     ".ball",
@@ -66,17 +68,6 @@ gsap
     0
   )
   .fromTo(
-    ".card",
-    {
-      x: 200,
-      y: 40,
-      transformOrigin: "50% 50%",
-      rotation: -4,
-      skewX: 10,
-      skewY: 4,
-      scale: 2,
-      opacity: 0,
-    },
     {
       duration: 1.3,
       skewX: 0,
@@ -104,7 +95,7 @@ window.onmousemove = (e) => {
 
   gsap
     .timeline({ defaults: { duration: 0.5, overwrite: "auto" } })
-    .to(".card", { rotation: -7 + 9 * winPercent.x }, 0)
+
     .to(".fillLight", { opacity: distFromCenter }, 0)
     .to(".bg", { x: 100 - 200 * winPercent.x, y: 20 - 40 * winPercent.y }, 0);
 };

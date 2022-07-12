@@ -1,7 +1,7 @@
-import Card from "./Components/Card";
 import Bg from "./Components/Bg";
 import Footer from "./Components/Footer";
 import "./App.css";
+import Timer from "./Components/Timer";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Bg />
       </div>
       <div className="content">
-        <Card />
+        <Timer />
         <Footer />
       </div>
     </>
