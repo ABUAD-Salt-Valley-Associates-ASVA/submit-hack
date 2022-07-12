@@ -1,5 +1,5 @@
 .card-container {
-    width: 600px;
+    width: 40rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(35px);
@@ -7,6 +7,7 @@
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
     padding: 30px 30px 30px 30px;
     overflow: hidden;
+    
 }
 
 .right {
@@ -22,3 +23,4 @@
     border-color: var(--color);
     height: 300px; */
 }
+

@@ -1,5 +1,5 @@
 .glassIco {
-    --width: 50px;
+    --width: 3rem;
     width: var(--width);
     height: var(--width);
     color: var(--color); /* #fff */
@@ -47,4 +47,11 @@
 
 .glassIco>* {
     opacity: 0.8;
+}
+
+.footer-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
