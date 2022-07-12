@@ -33,8 +33,32 @@
     
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 740px) {
     .card-container {
-        visibility: hidden;
+        /* visibility: hidden; */
+        margin: 20px;
+        width: 90%;
+    }
+    .card-container .grid-container {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .card-container {
+        width: 100%;
+        margin: 0px;
+    }
+    .footer-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .footer-container > a {
+        flex-basis: calc(50% - 50px);
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

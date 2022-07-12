@@ -9,7 +9,16 @@ function App() {
       <div className="back-g">
         <Bg />
       </div>
-      <div className="content">
+      <div
+        className="content"
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Timer />
         <Footer />
       </div>
