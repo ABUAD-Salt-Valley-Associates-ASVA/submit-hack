@@ -23,6 +23,10 @@ function App() {
         }}
       >
         <Timer />
+        {/*
+          Abeg help me fix the logo issue.
+          when you're done comment the <Timer /> and uncomment the <First />.
+        */}
         {/* <First /> */}
 
         {/* <TimesUp /> */}
