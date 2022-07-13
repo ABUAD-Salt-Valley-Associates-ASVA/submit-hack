@@ -4,6 +4,7 @@ import "./App.css";
 import Timer from "./Components/Timer";
 import Leaderboard from "./Components/Leaderboard";
 import TimesUp from "./Components/TimesUp";
+import First from "./Components/First";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         }}
       >
         <Timer />
+        {/* <First /> */}
 
         {/* <TimesUp /> */}
         {/* <Leaderboard /> */}

@@ -3,47 +3,49 @@ import gsap from "gsap";
 
 const Bg = () => {
   return (
-    <svg width="100%" height="100%">
-      <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="65%">
-          <stop offset="10%" stop-color="#004476" />
-          <stop offset="90%" stop-color="#006fbe" />
-        </linearGradient>
-        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="85%">
-          <stop offset="0%" stop-color="#f5eacc" />
-          <stop offset="80%" stop-color="#e0c677" />
-          <stop offset="110%" stop-color="#ebd8a0" />
-        </linearGradient>
-        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="85%">
-          <stop offset="0%" stop-color="#54e2fe" />
-          <stop offset="80%" stop-color="#049afd" />
-          <stop offset="110%" stop-color="#2aaffc" />
-        </linearGradient>
-        <linearGradient id="grad4" x1="0%" y1="0%" x2="80%" y2="70%">
-          <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
-          <stop offset="90%" stop-color="rgba(255,255,255,0.3)" />
-        </linearGradient>
-      </defs>
+    <>
+      <svg width="100%" height="100%">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="65%">
+            <stop offset="10%" stop-color="#004476" />
+            <stop offset="90%" stop-color="#006fbe" />
+          </linearGradient>
+          <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="85%">
+            <stop offset="0%" stop-color="#f5eacc" />
+            <stop offset="80%" stop-color="#e0c677" />
+            <stop offset="110%" stop-color="#ebd8a0" />
+          </linearGradient>
+          <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="85%">
+            <stop offset="0%" stop-color="#54e2fe" />
+            <stop offset="80%" stop-color="#049afd" />
+            <stop offset="110%" stop-color="#2aaffc" />
+          </linearGradient>
+          <linearGradient id="grad4" x1="0%" y1="0%" x2="80%" y2="70%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
+            <stop offset="90%" stop-color="rgba(255,255,255,0.3)" />
+          </linearGradient>
+        </defs>
 
-      <rect fill="url(#grad1)" width="100%" height="100%" />
+        <rect fill="url(#grad1)" width="100%" height="100%" />
 
-      <g class="main">
-        <circle
-          class="ball bg"
-          fill={fill[random1]}
-          cx="300"
-          cy="130"
-          r="130"
-        />
-        <circle
-          class="ball bg"
-          fill={fill[random1 + -1]}
-          cx="750"
-          cy="410"
-          r="210"
-        />
-      </g>
-    </svg>
+        <g class="main">
+          <circle
+            class="ball bg"
+            fill={fill[random1]}
+            cx="300"
+            cy="130"
+            r="130"
+          />
+          <circle
+            class="ball bg"
+            fill={fill[random1 + 1]}
+            cx="750"
+            cy="410"
+            r="210"
+          />
+        </g>
+      </svg>
+    </>
   );
 };
 

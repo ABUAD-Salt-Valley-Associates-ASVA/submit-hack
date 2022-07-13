@@ -1,5 +1,4 @@
 import React from "react";
-import Confetti from "react-confetti";
 import "./Card.css";
 
 const TimesUp = () => {
@@ -13,7 +12,7 @@ const TimesUp = () => {
         }}
       >
         <div className="card-header">
-          <h1>Time's Up</h1>
+          <h1>Time's Up !!!</h1>
         </div>
         <div className="card-body">
           Thank you for your submission. Stay tuned for the results.
