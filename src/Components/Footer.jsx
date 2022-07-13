@@ -53,17 +53,22 @@ const Footer = () => {
       </div>
       <div
         style={{
-          position: "absolute",
+          padding: "0.5rem",
           bottom: "0",
+          background: "rgba(255, 255, 255, 0.05)",
+          backdropFilter: "blur(2px)",
+          border: "1px solid rgba(255, 255, 255, 0.2)",
+          textAlign: "center",
+          boxShadow: "0 20px 30px rgba(0, 0, 0, 0.1)",
+          width: "100%",
         }}
       >
         <img
-          src="../Assets/logo1.png"
+          src="../Assets/logo2.png"
           alt="logo"
           style={{
-            // alignItems: "center",
-            height: "10rem",
-            width: "10rem",
+            height: "auto",
+            width: "8rem",
           }}
         />
 

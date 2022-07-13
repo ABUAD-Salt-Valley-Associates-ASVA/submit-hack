@@ -22,12 +22,12 @@ function App() {
           alignItems: "center",
         }}
       >
-        <Timer />
+        {/* <Timer /> */}
         {/*
-          Abeg help me fix the logo issue and also the centerring of the h1 tag in the card header component
+          Abeg help me fix the Footer issue like its not on the bottom and also the centering of the h1 tag in the card header component
           when you're done comment the <Timer /> and uncomment the <First />.
         */}
-        {/* <First /> */}
+        <First />
 
         {/* <TimesUp /> */}
         {/* <Leaderboard /> */}

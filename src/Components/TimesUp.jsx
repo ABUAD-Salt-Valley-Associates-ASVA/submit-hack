@@ -15,7 +15,7 @@ const TimesUp = () => {
           <h1>Time's Up !!!</h1>
         </div>
         <div className="card-body">
-          Thank you for your submission. Stay tuned for the results.
+          Thank you for participating. Stay tuned for the results.
         </div>
       </div>
     </>
