@@ -24,7 +24,7 @@ function App() {
       >
         <Timer />
         {/*
-          Abeg help me fix the logo issue.
+          Abeg help me fix the logo issue and also the centerring of the h1 tag in the card header component
           when you're done comment the <Timer /> and uncomment the <First />.
         */}
         {/* <First /> */}
