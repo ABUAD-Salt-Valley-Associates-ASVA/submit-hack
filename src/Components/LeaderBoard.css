@@ -1,0 +1,28 @@
+#leaderboard {
+    font-family: inherit;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#leaderboard td,
+#leaderboard th {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: inherit;
+    padding: 8px;
+}
+
+#leaderboard tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#leaderboard tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#leaderboard th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #004476;
+    color: white;
+}

@@ -2,6 +2,8 @@ import Bg from "./Components/Bg";
 import Footer from "./Components/Footer";
 import "./App.css";
 import Timer from "./Components/Timer";
+import Leaderboard from "./Components/Leaderboard";
+import TimesUp from "./Components/TimesUp";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         }}
       >
         <Timer />
+
+        {/* <TimesUp /> */}
+        {/* <Leaderboard /> */}
         <Footer />
       </div>
     </>

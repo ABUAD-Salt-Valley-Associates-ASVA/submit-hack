@@ -71,6 +71,7 @@ input::placeholder {
 
 .drop {
     padding: 2rem;
+    color: #fff;
 }
 
 .dropzone {
