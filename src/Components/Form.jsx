@@ -17,21 +17,26 @@ const Form = () => {
           name: "",
           email: "",
           department: "",
+          telephone: "",
           college: "",
           level: "",
-          telephone: "",
+          social: "",
           file: null,
         }}
         onSubmit={async (values, { resetForm, setSubmitting }) => {
+          const formData = new FormData();
+          console.log(values.file);
+          // formData.append(values.file[0]);
+          // console.log(formData);
           await axios
-            .post("", values)
+            .post("/submit", values)
             .then((res) => {
               console.log(res);
             })
             .catch((error) => {
               alert(error.message);
             });
-          resetForm({ values: "" });
+          // resetForm({ values: "" });
           setSubmitting(false);
         }}
       >
@@ -118,10 +123,10 @@ const Form = () => {
                 </Field>
                 <Field
                   style={inputStyle}
-                  name="department"
+                  name="social"
                   type="text"
                   onChange={handleChange}
-                  value={values.department}
+                  value={values.social}
                   placeholder="Social Media Handle*"
                   required
                   className="form_input"
