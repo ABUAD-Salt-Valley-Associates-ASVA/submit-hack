@@ -1,9 +1,8 @@
 import React from "react";
 import { MdLocationPin } from "react-icons/md";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaRegCopyright } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
-import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import "./Footer.css";
 
 const Footer = () => {
@@ -73,8 +72,8 @@ const Footer = () => {
         />
 
         <p>
-          <AiOutlineCopyrightCircle /> 2022 Abuad Salt Valley Associates. All
-          rights reserved.
+          <FaRegCopyright /> 2022 Abuad Salt Valley Associates. All rights
+          reserved.
         </p>
       </div>
     </>
