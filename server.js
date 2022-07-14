@@ -31,20 +31,25 @@ class GoogleDriveService {
 
   static uploadToGoogleDrive = async (file) => {
     const auth = GoogleDriveService.getAuth();
+    console.log("Gotten Auth");
     const fileMetaData = {
       name: file.originalname,
-      parents: ["hackathon-submission"],
+      parents: ["hackathon-submission"], // Replace with parent id
     };
     const media = {
       mimeType: file.mimeType,
       body: GoogleDriveService.bufferToStream(file.buffer),
     };
+    console.log("About to get DriveService");
     const driveService = google.drive({ version: "v3", auth });
+    console.log("Gooten drive service");
     const response = await driveService.files.create({
       requestBody: fileMetaData,
       media: media,
       fields: "id",
     });
+    console.log("Created");
+    GoogleDriveService.deleteFile(file.path);
     return response;
   };
 
@@ -65,17 +70,7 @@ class GoogleDriveService {
 class MulterFileHandler {
   static getInstance = () => {
     const multer = Multer({
-      storage: Multer.diskStorage({
-        destination: function (req, file, callback) {
-          callback(null, `${__dirname}`);
-        },
-        filename: function (req, file, callback) {
-          callback(
-            null,
-            file.fieldname + "_" + Date.now() + "_" + file.originalname
-          );
-        },
-      }),
+      storage: Multer.memoryStorage(),
       limits: {
         fileSize: 5 + 1024 * 1024,
       },
@@ -84,7 +79,6 @@ class MulterFileHandler {
   };
 }
 
-const upload = Multer({ dest: "uploads/" });
 app.post(
   "/upload-file-to-google-drive",
   MulterFileHandler.getInstance().single("file"),
