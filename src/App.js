@@ -6,7 +6,6 @@ import Leaderboard from "./Components/Leaderboard";
 import TimesUp from "./Components/TimesUp";
 import First from "./Components/First";
 import Title from "./Components/Title";
-// import Title from "./Components/Title";
 
 function App() {
   return (
@@ -14,6 +13,7 @@ function App() {
       <div className="back-g">
         <Bg />
       </div>
+      <Title />
       <div
         className="content"
         style={{
@@ -24,7 +24,6 @@ function App() {
           alignItems: "center",
         }}
       >
-        {/* <Title /> */}
         {/* <Timer /> */}
         <First />
 
