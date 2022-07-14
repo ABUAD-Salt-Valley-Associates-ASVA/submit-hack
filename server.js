@@ -8,6 +8,7 @@ const { Readable } = require("stream");
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 class GoogleDriveService {
@@ -48,6 +49,35 @@ class GoogleDriveService {
     return response;
   };
 
+  static uploadToGoogleForm = async (data) => {
+    const auth = GoogleDriveService.getAuth();
+    const googleSheets = google.sheets({
+      version: "v4",
+      auth: auth.getClient(),
+    });
+    const spreadsheetId = "1oQ0kZHHTEkhoJlfynnmwEiAG6rm4EhZiigxTLCXRENs";
+    // const fileMetadata = await googleSheets.spreadsheets.get({
+    //   auth,
+    //   spreadSheetId,
+    // });
+
+    // const getRows = await googleSheets.spreadsheets.values.get({
+    //   auth,
+    //   spreadSheetId,
+    //   range: "Sheet1",
+    // });
+
+    await googleSheets.spreadsheets.values.append({
+      auth,
+      spreadsheetId,
+      range: "Sheet1!A:G",
+      valueInputOption: "USER_ENTERED",
+      resource: {
+        values: [data],
+      },
+    });
+  };
+
   static deleteFile = (filePath) => {
     fs.unlink(filePath, () => {
       console.log("File Deleted");
@@ -79,10 +109,19 @@ app.post(
   MulterFileHandler.getInstance().single("file"),
   async (req, res, next) => {
     try {
-      const fileUploadResponse = await GoogleDriveService.uploadToGoogleDrive(
-        req.file
-      );
-      res.status(200).json(fileUploadResponse);
+      const body = req.body;
+      const data = [
+        body.name,
+        body.email,
+        body.department,
+        body.telephone,
+        body.college,
+        body.level,
+        body.social,
+      ];
+      await GoogleDriveService.uploadToGoogleDrive(req.file);
+      await GoogleDriveService.uploadToGoogleForm(data);
+      res.status(200).json("Successful");
     } catch (e) {
       console.log(e);
       res.status(400).json("An error occured");

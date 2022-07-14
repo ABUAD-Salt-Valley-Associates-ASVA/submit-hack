@@ -25,25 +25,18 @@ const Form = () => {
         }}
         onSubmit={(values, { resetForm, setSubmitting }) => {
           const formData = new FormData();
-          formData.append("file", values.file);
-          console.log(values.file);
+          for (let value in values) {
+            formData.append(value, values[value]);
+          }
           axios
             .post("/upload-file-to-google-drive", formData)
             .then((res) => {
+              resetForm({ values: "" });
               console.log(res);
             })
             .catch((err) => {
               console.log(err);
             });
-          // await axios
-          //   .post("/submit", { ...values, formData })
-          //   .then((res) => {
-          //     console.log(res);
-          //   })
-          //   .catch((error) => {
-          //     alert(error.message);
-          //   });
-          // resetForm({ values: "" });
           setSubmitting(false);
         }}
       >
