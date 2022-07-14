@@ -39,7 +39,7 @@ class GoogleDriveService {
       mimeType: file.mimeType,
       body: GoogleDriveService.bufferToStream(file.buffer),
     };
-    const driveService = google.drive({ version: "3", auth });
+    const driveService = google.drive({ version: "v3", auth });
     const response = await driveService.files.create({
       requestBody: fileMetaData,
       media: media,

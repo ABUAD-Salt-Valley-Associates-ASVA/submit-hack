@@ -31,14 +31,14 @@ const Bg = () => {
         <g class="main">
           <circle
             class="ball bg"
-            fill={fill[random1]}
+            fill="url(#grad2)"
             cx="300"
             cy="130"
             r="130"
           />
           <circle
             class="ball bg"
-            fill={fill[random1 + 1]}
+            fill={fill[random1]}
             cx="750"
             cy="410"
             r="210"
