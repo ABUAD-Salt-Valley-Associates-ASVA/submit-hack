@@ -31,25 +31,20 @@ class GoogleDriveService {
 
   static uploadToGoogleDrive = async (file) => {
     const auth = GoogleDriveService.getAuth();
-    console.log("Gotten Auth");
     const fileMetaData = {
       name: file.originalname,
-      parents: ["hackathon-submission"], // Replace with parent id
+      parents: ["1-zJ9a76cdf8KICbC2hmPSiHonUbGj_MV"],
     };
     const media = {
       mimeType: file.mimeType,
       body: GoogleDriveService.bufferToStream(file.buffer),
     };
-    console.log("About to get DriveService");
     const driveService = google.drive({ version: "v3", auth });
-    console.log("Gooten drive service");
     const response = await driveService.files.create({
       requestBody: fileMetaData,
       media: media,
       fields: "id",
     });
-    console.log("Created");
-    GoogleDriveService.deleteFile(file.path);
     return response;
   };
 
