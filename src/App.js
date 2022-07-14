@@ -23,15 +23,12 @@ function App() {
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
+          marginTop: "5vh",
+          marginBottom: "5vh",
         }}
       >
         <Timer />
-        {/*
-          Abeg help me fix the Footer issue like its not on the bottom and also the centering of the h1 tag in the card header component
-          when you're done comment the <Timer /> and uncomment the <First />.
-        */}
         {/* <First /> */}
-
         {/* <TimesUp /> */}
         {/* <Leaderboard /> */}
       </div>

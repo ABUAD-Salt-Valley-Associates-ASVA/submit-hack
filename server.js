@@ -105,7 +105,7 @@ class MulterFileHandler {
 }
 
 app.post(
-  "/upload-file-to-google-drive",
+  "/upload-data-to-google-drive",
   MulterFileHandler.getInstance().single("file"),
   async (req, res, next) => {
     try {

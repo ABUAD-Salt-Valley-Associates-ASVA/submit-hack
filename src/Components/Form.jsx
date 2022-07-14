@@ -29,7 +29,7 @@ const Form = () => {
             formData.append(value, values[value]);
           }
           axios
-            .post("/upload-file-to-google-drive", formData)
+            .post("/upload-data-to-google-drive", formData)
             .then((res) => {
               resetForm({ values: "" });
               console.log(res);

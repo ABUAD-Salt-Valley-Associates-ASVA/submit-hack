@@ -8,48 +8,6 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer" style={{ width: "100%" }}>
-      <div className="footer-container">
-        <a
-          class="glassIco"
-          href="https://goo.gl/maps/eH4vxhLr2pq3uscu8"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <MdLocationPin />
-        </a>
-        <a
-          class="glassIco"
-          href="mailto:asvaabuad@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <HiMail />
-        </a>
-        <a
-          class="glassIco"
-          href="https://www.instagram.com/a.s.v.a__/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsInstagram />
-        </a>
-        <a
-          class="glassIco"
-          href="https://www.linkedin.com/company/abuad-salt-valley-associates-asva/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          class="glassIco"
-          href="https://mobile.twitter.com/asva__"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <BsTwitter />
-        </a>
-      </div>
       <div
         style={{
           width: "100%",
