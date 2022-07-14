@@ -11,6 +11,8 @@ const Footer = () => {
       <div
         style={{
           width: "100%",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <div className="footer-container">
@@ -55,38 +57,31 @@ const Footer = () => {
             <BsTwitter />
           </a>
         </div>
+
         <div
           style={{
-            position: "absolute",
+            padding: "0.5rem",
             bottom: "0",
-            width: "100%",
+            background: "rgba(255, 255, 255, 0.05)",
+            backdropFilter: "blur(2px)",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            textAlign: "center",
+            boxShadow: "0 20px 30px rgba(0, 0, 0, 0.1)",
           }}
         >
-          <div
+          <img
+            src="../Assets/logo2.png"
+            alt="logo"
             style={{
-              padding: "0.5rem",
-              bottom: "0",
-              background: "rgba(255, 255, 255, 0.05)",
-              backdropFilter: "blur(2px)",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
-              textAlign: "center",
-              boxShadow: "0 20px 30px rgba(0, 0, 0, 0.1)",
+              height: "auto",
+              width: "8rem",
             }}
-          >
-            <img
-              src="../Assets/logo2.png"
-              alt="logo"
-              style={{
-                height: "auto",
-                width: "8rem",
-              }}
-            />
+          />
 
-            <p>
-              <FaRegCopyright /> 2022 Abuad Salt Valley Associates. All rights
-              reserved.
-            </p>
-          </div>
+          <p>
+            <FaRegCopyright /> 2022 Abuad Salt Valley Associates. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </>

@@ -5,6 +5,8 @@ import Timer from "./Components/Timer";
 import Leaderboard from "./Components/Leaderboard";
 import TimesUp from "./Components/TimesUp";
 import First from "./Components/First";
+import Title from "./Components/Title";
+// import Title from "./Components/Title";
 
 function App() {
   return (
@@ -22,11 +24,8 @@ function App() {
           alignItems: "center",
         }}
       >
+        {/* <Title /> */}
         {/* <Timer /> */}
-        {/*
-          Abeg help me fix the Footer issue like its not on the bottom and also the centering of the h1 tag in the card header component
-          when you're done comment the <Timer /> and uncomment the <First />.
-        */}
         <First />
 
         {/* <TimesUp /> */}
