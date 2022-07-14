@@ -26,6 +26,8 @@
 
 .card-header{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .t-left {

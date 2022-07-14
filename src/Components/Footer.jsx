@@ -7,7 +7,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <>
+    <div className="footer" style={{ width: "100%" }}>
       <div className="footer-container">
         <a
           class="glassIco"
@@ -76,7 +76,7 @@ const Footer = () => {
           reserved.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

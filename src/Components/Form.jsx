@@ -23,24 +23,38 @@ const Form = () => {
           social: "",
           file: null,
         }}
-        onSubmit={async (values, { resetForm, setSubmitting }) => {
+        onSubmit={(values, { resetForm, setSubmitting }) => {
           const formData = new FormData();
+          formData.append("file", values.file);
           console.log(values.file);
-          // formData.append(values.file[0]);
-          // console.log(formData);
-          await axios
-            .post("/submit", values)
+          axios
+            .post("/upload-file-to-google-drive", formData)
             .then((res) => {
               console.log(res);
             })
-            .catch((error) => {
-              alert(error.message);
+            .catch((err) => {
+              console.log(err);
             });
+          // await axios
+          //   .post("/submit", { ...values, formData })
+          //   .then((res) => {
+          //     console.log(res);
+          //   })
+          //   .catch((error) => {
+          //     alert(error.message);
+          //   });
           // resetForm({ values: "" });
           setSubmitting(false);
         }}
       >
-        {({ values, isSubmitting, errors, handleChange, handleSubmit }) => (
+        {({
+          values,
+          isSubmitting,
+          errors,
+          handleChange,
+          handleSubmit,
+          setFieldValue,
+        }) => (
           <form onSubmit={handleSubmit}>
             <div className="grid-container rw-rev">
               <div className="col-f-1">
@@ -135,14 +149,16 @@ const Form = () => {
               <div className="col-f-1">
                 <div className="upload-container">
                   <div className="drop">
-                    <Field
+                    <input
                       id="file"
                       name="file"
                       type="file"
                       className="form-control"
                       required
                       style={inputStyle}
-                      onChange={handleChange}
+                      onChange={(event) =>
+                        setFieldValue("file", event.currentTarget.files[0])
+                      }
                     />
                     Ensure to save the file with your name
                   </div>
