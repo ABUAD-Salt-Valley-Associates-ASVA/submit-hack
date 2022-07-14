@@ -16,14 +16,19 @@ const Footer = () => {
       >
         <MdLocationPin />
       </a>
-      <a class="glassIco" href="mailto:asvaabuad@gmail.com" target="_blank">
+      <a
+        class="glassIco"
+        href="mailto:asvaabuad@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
         <HiMail />
       </a>
       <a
         class="glassIco"
         href="https://www.instagram.com/a.s.v.a__/"
         target="_blank"
-        el="noreferrer"
+        rel="noreferrer"
       >
         <BsInstagram />
       </a>
