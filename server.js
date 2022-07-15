@@ -104,12 +104,17 @@ class MulterFileHandler {
   };
 }
 
+app.get("/", (req, res) => {
+  res.status(200).json("Server Running");
+});
+
 app.post(
   "/upload-data-to-google-drive",
   MulterFileHandler.getInstance().single("file"),
   async (req, res, next) => {
     try {
       const body = req.body;
+      await GoogleDriveService.uploadToGoogleDrive(req.file);
       const data = [
         body.name,
         body.email,
@@ -118,8 +123,8 @@ app.post(
         body.college,
         body.level,
         body.social,
+        req.file.originalname,
       ];
-      await GoogleDriveService.uploadToGoogleDrive(req.file);
       await GoogleDriveService.uploadToGoogleForm(data);
       res.status(200).json("Successful");
     } catch (e) {
@@ -129,6 +134,6 @@ app.post(
   }
 );
 
-app.listen(3001, () => {
-  console.log(`Backend server running on port: 3001`);
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Backend server running on port: ${process.env.PORT || 5000}`);
 });

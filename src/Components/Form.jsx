@@ -23,15 +23,19 @@ const Form = () => {
           social: "",
           file: null,
         }}
-        onSubmit={(values, { resetForm, setSubmitting }) => {
+        onSubmit={(values, { resetForm, setSubmitting, setFieldValue }) => {
           const formData = new FormData();
           for (let value in values) {
             formData.append(value, values[value]);
           }
           axios
-            .post("submit-hack.herokuapp.com/google-blah-blah", formData)
+            .post(
+              "https://submit-hack.herokuapp.com/upload-data-to-google-drive",
+              formData
+            )
             .then((res) => {
               resetForm({ values: "" });
+              setFieldValue({ file: null });
               console.log(res);
             })
             .catch((err) => {
