@@ -29,7 +29,7 @@ const Form = () => {
             formData.append(value, values[value]);
           }
           axios
-            .post("/upload-data-to-google-drive", formData)
+            .post("submit-hack.herokuapp.com/google-blah-blah", formData)
             .then((res) => {
               resetForm({ values: "" });
               console.log(res);
