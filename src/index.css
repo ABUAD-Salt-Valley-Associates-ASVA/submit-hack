@@ -1,20 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html,
-body {  
+body {
   font-family: 'Space Mono', monospace;
   letter-spacing: 1.6px;
   margin: 0%;
+  scroll-behavior: smooth;
 }
 
 #root {
   min-height: 100vh;
 }
 
-:root{
+:root {
   --color: #fff;
 }

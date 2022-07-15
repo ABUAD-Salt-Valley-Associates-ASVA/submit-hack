@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field } from "formik";
 import axios from "axios";
 import "./Form.css";
+import { SpinnerRoundFilled } from 'spinners-react';
 
 const inputStyle = {
   width: "100%",
@@ -169,7 +170,8 @@ const Form = () => {
                 style={{ padding: "10px 5px" }}
                 disabled={isSubmitting}
               >
-                {isSubmitting && <div className="swap"></div>}
+                
+                {isSubmitting && <SpinnerRoundFilled color={"#000"} />}
                 {!isSubmitting && "Submit"}
               </button>
             </div>
