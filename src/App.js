@@ -27,8 +27,8 @@ function App() {
           marginBottom: "5vh",
         }}
       >
-        <Timer />
-        {/* <First /> */}
+        {/* <Timer /> */}
+        <First />
         {/* <TimesUp /> */}
         {/* <Leaderboard /> */}
       </div>
