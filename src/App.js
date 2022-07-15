@@ -17,7 +17,7 @@ function App() {
       <div
         className="content"
         style={{
-          minHeight: "calc(100vh - 224px)",
+          minHeight: "55vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
