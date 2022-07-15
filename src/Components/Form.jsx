@@ -38,9 +38,11 @@ const Form = () => {
               resetForm({ values: "" });
               setFieldValue({ file: null });
               console.log(res);
+              alert("Code Submitted Successfully")
             })
             .catch((err) => {
               console.log(err);
+              alert("Code Submmision Unsuccessfull. Please Try again")
             });
           setSubmitting(false);
         }}
@@ -170,8 +172,7 @@ const Form = () => {
                 style={{ padding: "10px 5px" }}
                 disabled={isSubmitting}
               >
-                
-                {isSubmitting && <SpinnerRoundFilled color={"#000"} />}
+                {isSubmitting && (<SpinnerRoundFilled color={"#000"} />)}
                 {!isSubmitting && "Submit"}
               </button>
             </div>
