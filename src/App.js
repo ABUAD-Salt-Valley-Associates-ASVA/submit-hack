@@ -6,6 +6,7 @@ import Leaderboard from "./Components/Leaderboard";
 // import TimesUp from "./Components/TimesUp";
 import First from "./Components/First";
 import Title from "./Components/Title";
+import Email from "./Components/Email";
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
         {/* <Timer /> */}
         {/* <First /> */}
         {/* <TimesUp /> */}
-        <Leaderboard />
+        {/* <Leaderboard /> */}
+        <Email />
       </div>
       <Footer />
     </>

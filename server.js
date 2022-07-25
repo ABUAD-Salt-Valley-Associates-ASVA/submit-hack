@@ -34,7 +34,7 @@ class GoogleDriveService {
     const auth = GoogleDriveService.getAuth();
     const fileMetaData = {
       name: file.originalname,
-      parents: ["1-zJ9a76cdf8KICbC2hmPSiHonUbGj_MV"],
+      parents: [process.env.GOOGLE_DRIVE_FOLDER_ID],
     };
     const media = {
       mimeType: file.mimeType,
@@ -55,7 +55,7 @@ class GoogleDriveService {
       version: "v4",
       auth: auth.getClient(),
     });
-    const spreadsheetId = "1oQ0kZHHTEkhoJlfynnmwEiAG6rm4EhZiigxTLCXRENs";
+    const spreadsheetId = process.env.SPREADSHEET_ID;
     // const fileMetadata = await googleSheets.spreadsheets.get({
     //   auth,
     //   spreadSheetId,
