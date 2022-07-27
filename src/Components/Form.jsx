@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Field } from "formik";
 import axios from "axios";
 import "./Form.css";
-import { SpinnerRoundFilled } from 'spinners-react';
+import { SpinnerRoundFilled } from "spinners-react";
 
 const inputStyle = {
   width: "100%",
@@ -30,19 +30,16 @@ const Form = () => {
             formData.append(value, values[value]);
           }
           axios
-            .post(
-              "https://submit-hack.herokuapp.com/upload-data-to-google-drive",
-              formData
-            )
+            .post(process.env.API_ROUTE, formData)
             .then((res) => {
               resetForm({ values: "" });
               setFieldValue({ file: null });
               console.log(res);
-              alert("Code Submitted Successfully")
+              alert("Code Submitted Successfully");
             })
             .catch((err) => {
               console.log(err);
-              alert("Code Submmision Unsuccessfull. Please Try again")
+              alert("Code Submmision Unsuccessfull. Please Try again");
             });
           setSubmitting(false);
         }}
@@ -172,7 +169,7 @@ const Form = () => {
                 style={{ padding: "10px 5px" }}
                 disabled={isSubmitting}
               >
-                {isSubmitting && (<SpinnerRoundFilled color={"#000"} />)}
+                {isSubmitting && <SpinnerRoundFilled color={"#000"} />}
                 {!isSubmitting && "Submit"}
               </button>
             </div>
