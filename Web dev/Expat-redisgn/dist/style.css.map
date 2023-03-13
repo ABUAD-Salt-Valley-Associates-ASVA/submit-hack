@@ -1,0 +1,1 @@
+{"version":3,"sources":["../app/scss/globals/_colors.scss","style.css","../app/scss/globals/_resets.scss","../app/scss/globals/_typography.scss"],"names":[],"mappings":"AAAA;EACI,mBAAA;EACA,qBAAA;EACA,kBAAA;ACCJ;;ACJA;EACI,sBAAA;EACA,eAAA;ADOJ;;ACJA;;;EAGI,mBAAA;ADOJ;;AEbA;;;;;;EAMI,aAAA;EACA,gBAAA;EACA,gBAAA;AFgBJ;;AEbA;EACI,qBAAA;AFgBJ","file":"style.css"}
